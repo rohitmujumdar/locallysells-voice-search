@@ -40,13 +40,15 @@ function search(query = "", category = "", limit = 20): Product[] {
   let res = CATALOG;
   if (cat) res = res.filter((r) => (r.category || "").toLowerCase() === cat);
   if (q) {
-    res = res.filter((r) =>
-      (r.name || "").toLowerCase().includes(q) ||
-      (r.brand || "").toLowerCase().includes(q) ||
-      (r.sku || "").toLowerCase().includes(q) ||
-      (r.barcode || "").toLowerCase().includes(q) ||
-      (r.flavor || "").toLowerCase().includes(q)
-    );
+    // Token-based match: a product matches if EVERY query word appears in its
+    // searchable text. Trailing "s" is stripped so "reds" matches "red",
+    // "vapes" matches "vape". Far more forgiving than a single substring.
+    const singular = (t: string) => (t.endsWith("s") && t.length > 3 ? t.slice(0, -1) : t);
+    const tokens = q.split(/\s+/).filter(Boolean);
+    res = res.filter((r) => {
+      const hay = `${r.name} ${r.brand} ${r.flavor} ${r.category} ${r.sku} ${r.barcode}`.toLowerCase();
+      return tokens.every((t) => hay.includes(t) || hay.includes(singular(t)));
+    });
   }
   res = [...res].sort((a, b) => (b.conf - a.conf) || a.name.localeCompare(b.name));
   return res.slice(0, Math.min(limit, 100));
@@ -89,7 +91,12 @@ function orderNumber(): string {
 
 function placeOrder(args: Record<string, unknown>): string {
   const address = String(args.delivery_address ?? args.address ?? "").trim();
-  const rawItems = (args.items ?? []) as Array<Record<string, unknown>>;
+  // LLMs often pass `items` as a JSON-encoded string instead of a real array.
+  // Accept both so the order doesn't silently fail.
+  let rawItems = args.items ?? [];
+  if (typeof rawItems === "string") {
+    try { rawItems = JSON.parse(rawItems); } catch { rawItems = []; }
+  }
   if (!Array.isArray(rawItems) || rawItems.length === 0) {
     return "No items to order yet. Confirm what the caller wants first, then place the order.";
   }
@@ -99,7 +106,7 @@ function placeOrder(args: Record<string, unknown>): string {
 
   const lines: string[] = [];
   let total = 0;
-  for (const it of rawItems) {
+  for (const it of rawItems as Array<Record<string, unknown>>) {
     const name = String(it.name ?? it.product_name ?? "");
     const qty = Math.max(1, parseInt(String(it.quantity ?? 1)) || 1);
     const prod = bestMatch(name);
