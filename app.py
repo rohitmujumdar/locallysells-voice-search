@@ -145,6 +145,35 @@ def _extract_tool_calls(body: dict):
     return calls
 
 
+# ---- Tier 2: ordering (mock cart + order) ----------------------------------
+# In-memory carts keyed by the Vapi call id, so concurrent demo calls don't mix.
+# This is a hackathon mock: no DB write, no payment. It proves the voice flow.
+
+import random
+import string
+
+CARTS = {}  # { call_id: [ {name, price, qty}, ... ] }
+
+
+def _call_id(body: dict) -> str:
+    msg = body.get("message", body)
+    call = msg.get("call") or {}
+    return call.get("id") or "default"
+
+
+def _cart_total(cart):
+    return sum((i["price"] or 0) * i["qty"] for i in cart)
+
+
+def _best_match(name: str):
+    res = search(name, "", 5)
+    return res[0] if res else None
+
+
+def _order_number():
+    return "LS-" + "".join(random.choices(string.ascii_uppercase + string.digits, k=6))
+
+
 app = FastAPI(title="LocallySells Voice Search")
 
 
@@ -183,6 +212,86 @@ async def search_products(request: Request):
             "toolCallId": tc_id,
             "result": build_result_string(query, category, products),
         })
+
+    return JSONResponse({"results": results})
+
+
+@app.post("/add_to_cart")
+async def add_to_cart(request: Request):
+    """Vapi tool: add a product (by name) to the caller's cart."""
+    body = await request.json()
+    cart_id = _call_id(body)
+    calls = _extract_tool_calls(body) or [("call_0", body if isinstance(body, dict) else {})]
+
+    results = []
+    for tc_id, args in calls:
+        name = args.get("product_name") or args.get("name") or args.get("query") or ""
+        try:
+            qty = max(1, int(args.get("quantity") or 1))
+        except (TypeError, ValueError):
+            qty = 1
+
+        prod = _best_match(name)
+        if not prod:
+            res = f'I could not find "{name}" in the catalog. Ask the caller to try another product or brand.'
+        else:
+            cart = CARTS.setdefault(cart_id, [])
+            cart.append({"name": prod["name"], "price": prod["_price"], "qty": qty})
+            total = _cart_total(cart)
+            count = sum(i["qty"] for i in cart)
+            res = (
+                f'Added {qty} x {prod["name"]} at ${prod["_price"]:.2f} each. '
+                f'Cart now has {count} item(s), total ${total:.2f}.'
+            )
+        results.append({"toolCallId": tc_id, "result": res})
+
+    return JSONResponse({"results": results})
+
+
+@app.post("/view_cart")
+async def view_cart(request: Request):
+    """Vapi tool: read back the current cart."""
+    body = await request.json()
+    cart_id = _call_id(body)
+    calls = _extract_tool_calls(body) or [("call_0", {})]
+
+    cart = CARTS.get(cart_id, [])
+    if not cart:
+        summary = "The cart is empty."
+    else:
+        lines = [f'{i["qty"]} x {i["name"]} (${i["price"]:.2f} each)' for i in cart]
+        summary = "Cart: " + "; ".join(lines) + f". Total ${_cart_total(cart):.2f}."
+
+    return JSONResponse({"results": [{"toolCallId": tc, "result": summary} for tc, _ in calls]})
+
+
+@app.post("/place_order")
+async def place_order(request: Request):
+    """Vapi tool: confirm + place the order for whatever is in the cart."""
+    body = await request.json()
+    cart_id = _call_id(body)
+    calls = _extract_tool_calls(body) or [("call_0", body if isinstance(body, dict) else {})]
+
+    results = []
+    for tc_id, args in calls:
+        address = args.get("delivery_address") or args.get("address") or ""
+        cart = CARTS.get(cart_id, [])
+
+        if not cart:
+            res = "The cart is empty, so there's nothing to order. Help the caller add a product first."
+        elif not address:
+            res = "I need a delivery address before placing the order. Ask the caller where to deliver."
+        else:
+            order_no = _order_number()
+            total = _cart_total(cart)
+            items = ", ".join(f'{i["qty"]} x {i["name"]}' for i in cart)
+            CARTS[cart_id] = []  # clear after ordering
+            res = (
+                f"Order {order_no} confirmed: {items}. Total ${total:.2f}, "
+                f"delivering to {address}. Estimated delivery about 45 minutes. "
+                f"Remind the caller that a valid 21-plus ID is required at the door."
+            )
+        results.append({"toolCallId": tc_id, "result": res})
 
     return JSONResponse({"results": results})
 
