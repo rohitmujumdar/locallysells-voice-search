@@ -8,8 +8,9 @@
   :root{
     --bg:#0d1117; --bg2:#0a0e14; --card:#161b22; --card2:#1c2330;
     --border:#2a3140; --text:#e6edf3; --muted:#8b949e; --faint:#5b636e;
-    --vapi:#2dd4bf;      /* voice / Vapi-managed */
-    --ours:#a78bfa;      /* our code */
+    --vapi:#2dd4bf;      /* voice / Vapi */
+    --nebius:#6ea8ff;    /* Nebius brain */
+    --ours:#a78bfa;      /* our code / Insforge function */
     --ls:#E8601C;        /* LocallySells (abstracted) */
     --data:#f0a500;      /* data */
     --ok:#3fb950;
@@ -25,7 +26,7 @@
   header{padding:54px 0 26px}
   h1{font-size:34px; margin:0 0 8px; letter-spacing:-.5px}
   h1 .accent{color:var(--vapi)}
-  .sub{color:var(--muted); font-size:17px; max-width:760px}
+  .sub{color:var(--muted); font-size:17px; max-width:780px}
   .pills{display:flex; gap:8px; flex-wrap:wrap; margin-top:18px}
   .pill{font-size:12.5px; padding:5px 11px; border-radius:999px; border:1px solid var(--border); background:var(--card); color:var(--muted)}
   .pill b{color:var(--text); font-weight:600}
@@ -46,9 +47,20 @@
 
   /* mental model */
   .oneliner{font-size:18.5px; line-height:1.6}
-  .oneliner b.v{color:var(--vapi)} .oneliner b.o{color:var(--ours)} .oneliner b.l{color:var(--ls)} .oneliner b.d{color:var(--data)}
+  .oneliner b.v{color:var(--vapi)} .oneliner b.nb{color:var(--nebius)} .oneliner b.o{color:var(--ours)} .oneliner b.l{color:var(--ls)} .oneliner b.d{color:var(--data)}
 
-  /* generic node grid for contract */
+  /* sponsor strip */
+  .sponsors{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:16px}
+  @media(max-width:720px){.sponsors{grid-template-columns:1fr}}
+  .sp{background:var(--bg2); border:1px solid var(--border); border-radius:12px; padding:14px 16px}
+  .sp .role{font-size:11px; text-transform:uppercase; letter-spacing:1px; color:var(--muted)}
+  .sp .nm{font-size:17px; font-weight:700; margin-top:3px}
+  .sp .ds{font-size:12.5px; color:var(--muted); margin-top:4px}
+  .sp.v{border-color:rgba(45,212,191,.4)} .sp.v .nm{color:var(--vapi)}
+  .sp.nb{border-color:rgba(110,168,255,.4)} .sp.nb .nm{color:var(--nebius)}
+  .sp.in{border-color:rgba(167,139,250,.4)} .sp.in .nm{color:var(--ours)}
+
+  /* io grid */
   .io{display:grid; grid-template-columns:1fr 1fr; gap:16px}
   @media(max-width:720px){.io{grid-template-columns:1fr}}
   .iobox{background:var(--bg2); border:1px solid var(--border); border-radius:12px; padding:16px}
@@ -57,7 +69,6 @@
   .k{color:#79c0ff} .s{color:#a5d6a4} .n{color:#f0a500} .c{color:var(--faint)}
 
   /* boundary diagram */
-  .boundary{display:grid; grid-template-columns:1fr; gap:0}
   .field-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
   .chip{font-size:12.5px; padding:4px 10px; border-radius:8px; background:#241a10; border:1px solid rgba(240,165,0,.35); color:#ffd27a; font-family:"SF Mono",monospace}
   .chip.in{background:#1b1530; border-color:rgba(167,139,250,.4); color:#cbb8ff}
@@ -73,24 +84,26 @@
   .bar-row .num{color:var(--muted); text-align:right; font-variant-numeric:tabular-nums}
   .cat-name{color:var(--text)}
 
-  /* schema table */
+  /* table */
   table{width:100%; border-collapse:collapse; font-size:13.5px; margin-top:6px}
   th,td{text-align:left; padding:8px 10px; border-bottom:1px solid var(--border)}
   th{color:var(--muted); font-weight:600; font-size:12px; text-transform:uppercase; letter-spacing:.5px}
   td code{font-size:12px}
-  .exposed{color:var(--data)} .tag{font-size:10.5px; padding:1px 7px; border-radius:999px; vertical-align:middle}
+  .tag{font-size:10.5px; padding:1px 7px; border-radius:999px; vertical-align:middle}
   .tag.e{background:rgba(240,165,0,.15); color:var(--data); border:1px solid rgba(240,165,0,.3)}
 
   /* deploy topology */
   .deploy{display:grid; grid-template-columns:1fr 1fr; gap:16px}
   @media(max-width:720px){.deploy{grid-template-columns:1fr}}
   .dcol{background:var(--bg2); border:1px solid var(--border); border-radius:12px; padding:16px}
-  .dcol.now{border-color:rgba(63,185,80,.35)}
+  .dcol.now{border-color:rgba(63,185,80,.4)}
+  .dcol.old{opacity:.7}
   .dcol h4{margin:0 0 4px; font-size:14px}
   .dcol .state{font-size:11.5px; text-transform:uppercase; letter-spacing:1px}
   .flowmini{font-family:"SF Mono",monospace; font-size:12.5px; color:#cdd9e5; margin-top:10px; line-height:1.9}
   .flowmini .seg{padding:2px 7px; border-radius:6px; background:#11151c; border:1px solid var(--border)}
   .arrow{color:var(--faint); padding:0 4px}
+  .strike{text-decoration:line-through; color:var(--faint)}
 
   /* tiers */
   .tiers{display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px}
@@ -99,14 +112,12 @@
   .tier .badge{font-size:11px; padding:3px 9px; border-radius:999px; font-weight:700}
   .tier.done{border-color:rgba(63,185,80,.4)}
   .tier.done .badge{background:var(--ok); color:#04210d}
-  .tier .badge.next{background:rgba(167,139,250,.2); color:#cbb8ff; border:1px solid rgba(167,139,250,.4)}
   .tier .badge.later{background:#1c2330; color:var(--muted); border:1px solid var(--border)}
   .tier h4{margin:10px 0 6px; font-size:15px}
   .tier p{font-size:13px; color:var(--muted); margin:0}
 
   .foot{margin-top:36px; font-size:12.5px; color:var(--faint)}
-  .foot code{font-size:11.5px}
-  .ref{display:grid; grid-template-columns:160px 1fr; gap:6px 14px; margin-top:10px; font-size:13px}
+  .ref{display:grid; grid-template-columns:170px 1fr; gap:6px 14px; margin-top:10px; font-size:13px}
   .ref .key{color:var(--muted)}
   .ref .val{font-family:"SF Mono",monospace; font-size:12px; color:#cdd9e5; word-break:break-all}
   svg{max-width:100%; height:auto; display:block}
@@ -117,51 +128,70 @@
 
   <header>
     <h1>LocallySells <span class="accent">Voice Search</span> — System Overview</h1>
-    <div class="sub">A Vapi voice agent that lets a caller ask "do you have Marlboro Reds?" and hear back real products and prices from the LocallySells tobacco catalog. This page maps how the pieces fit, and exactly what surface of LocallySells the agent touches.</div>
+    <div class="sub">A voice agent that lets a caller ask "do you have Marlboro Reds?" or order for delivery, and hear back real products and prices from the LocallySells tobacco catalog. Built on three sponsor platforms working together.</div>
     <div class="pills">
-      <span class="pill ok">Tier 1 voice search <b>LIVE</b></span>
+      <span class="pill ok">Tier 1 search <b>LIVE</b></span>
+      <span class="pill ok">Tier 2 ordering <b>LIVE</b></span>
+      <span class="pill ok">Hosting <b>serverless, off-laptop</b></span>
       <span class="pill">Catalog <b>198 products · 7 categories</b></span>
-      <span class="pill">Agent <b>gpt-4o · Elliot voice</b></span>
-      <span class="pill">Tool round-trip <b>verified</b></span>
+      <span class="pill">Brain <b>Nebius · Llama 3.3 70B</b></span>
     </div>
     <div class="legend">
-      <span><i class="dot" style="background:var(--vapi)"></i> Vapi manages</span>
-      <span><i class="dot" style="background:var(--ours)"></i> Our code</span>
+      <span><i class="dot" style="background:var(--vapi)"></i> Vapi (voice)</span>
+      <span><i class="dot" style="background:var(--nebius)"></i> Nebius (brain)</span>
+      <span><i class="dot" style="background:var(--ours)"></i> Our code on Insforge</span>
       <span><i class="dot" style="background:var(--data)"></i> Catalog data (exposed)</span>
       <span><i class="dot" style="background:var(--ls)"></i> LocallySells platform (abstracted)</span>
     </div>
   </header>
 
-  <!-- 1. MENTAL MODEL -->
+  <!-- SPONSOR TRIFECTA -->
+  <section>
+    <h2>The three platforms, and what each one does</h2>
+    <div class="sponsors">
+      <div class="sp v">
+        <div class="role">Voice spine</div>
+        <div class="nm">Vapi</div>
+        <div class="ds">Runs the live call. Hears the caller (speech to text), speaks back (text to speech), and orchestrates the loop. Calls out to the other two for thinking and data.</div>
+      </div>
+      <div class="sp nb">
+        <div class="role">The brain</div>
+        <div class="nm">Nebius</div>
+        <div class="ds">Hosts the LLM (Llama 3.3 70B) that decides what to do, e.g. "I should search the catalog." Paid by Nebius credits, not Vapi credits. Swapped in as Vapi's custom LLM.</div>
+      </div>
+      <div class="sp in">
+        <div class="role">Tool host</div>
+        <div class="nm">Insforge</div>
+        <div class="ds">Runs our search + order code as a serverless edge function. Stable public URL, off your laptop. This is the only piece we actually wrote.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENTAL MODEL -->
   <section>
     <h2>The 30-second mental model</h2>
     <div class="card">
       <p class="oneliner">
-        <b class="v">Vapi</b> runs the live phone call (hears the caller, thinks with an LLM, speaks back).
-        When the LLM needs real product info, it calls <b class="o">our one tool</b>,
-        <code>search_products</code>, which queries <b class="d">a copy of the LocallySells catalog</b>
-        and hands back the top matches with prices. Everything else about
-        <b class="l">LocallySells</b> (orders, payments, delivery, database) stays a black box the agent never touches.
+        <b class="v">Vapi</b> runs the live phone call. The thinking is done by an LLM on
+        <b class="nb">Nebius</b>. When that LLM needs real product info, it calls
+        <b class="o">our tools on Insforge</b>, which query <b class="d">a copy of the LocallySells catalog</b>
+        and return matches with prices, or place an order. Everything else about
+        <b class="l">LocallySells</b> (the database, payments, delivery) stays a black box the agent never touches.
       </p>
     </div>
   </section>
 
-  <!-- 2. ONE CALL, END TO END -->
+  <!-- ONE CALL -->
   <section>
     <h2>Anatomy of one voice call</h2>
-    <div class="lead">Listen → think → speak, with a detour to our tool when the agent needs data</div>
+    <div class="lead">Listen → think (on Nebius) → speak, with a detour to our tools on Insforge</div>
     <div class="card">
       <svg viewBox="0 0 960 470" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Roboto,sans-serif">
         <defs>
-          <marker id="ah" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
-            <path d="M0,0 L7,3 L0,6 Z" fill="#7d8694"/>
-          </marker>
-          <marker id="ahv" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
-            <path d="M0,0 L7,3 L0,6 Z" fill="#2dd4bf"/>
-          </marker>
-          <marker id="aho" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
-            <path d="M0,0 L7,3 L0,6 Z" fill="#a78bfa"/>
-          </marker>
+          <marker id="ah" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#7d8694"/></marker>
+          <marker id="ahv" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#2dd4bf"/></marker>
+          <marker id="aho" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#a78bfa"/></marker>
+          <marker id="ahn" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#6ea8ff"/></marker>
         </defs>
 
         <!-- Caller -->
@@ -175,119 +205,115 @@
         <text x="205" y="62" fill="#2dd4bf" font-size="12" font-weight="700" letter-spacing="1">VAPI CLOUD · voice orchestration</text>
 
         <!-- STT -->
-        <rect x="205" y="86" rx="10" width="160" height="78" fill="#10211f" stroke="rgba(45,212,191,.5)"/>
-        <text x="285" y="112" fill="#2dd4bf" font-size="13" text-anchor="middle" font-weight="700">STT</text>
-        <text x="285" y="131" fill="#cdd9e5" font-size="11" text-anchor="middle">Deepgram nova-2</text>
-        <text x="285" y="147" fill="#8b949e" font-size="10.5" text-anchor="middle">speech → text</text>
+        <rect x="205" y="86" rx="10" width="150" height="78" fill="#10211f" stroke="rgba(45,212,191,.5)"/>
+        <text x="280" y="112" fill="#2dd4bf" font-size="13" text-anchor="middle" font-weight="700">STT</text>
+        <text x="280" y="131" fill="#cdd9e5" font-size="11" text-anchor="middle">Deepgram</text>
+        <text x="280" y="147" fill="#8b949e" font-size="10.5" text-anchor="middle">speech → text</text>
 
-        <!-- LLM -->
-        <rect x="405" y="86" rx="10" width="160" height="78" fill="#10211f" stroke="rgba(45,212,191,.5)"/>
-        <text x="485" y="112" fill="#2dd4bf" font-size="13" text-anchor="middle" font-weight="700">LLM · gpt-4o</text>
-        <text x="485" y="131" fill="#cdd9e5" font-size="11" text-anchor="middle">decides what to do</text>
-        <text x="485" y="147" fill="#8b949e" font-size="10.5" text-anchor="middle">+ system prompt</text>
+        <!-- LLM (calls Nebius) -->
+        <rect x="400" y="86" rx="10" width="170" height="78" fill="#0f1830" stroke="rgba(110,168,255,.6)"/>
+        <text x="485" y="110" fill="#6ea8ff" font-size="12.5" text-anchor="middle" font-weight="700">LLM · the brain</text>
+        <text x="485" y="129" fill="#cdd9e5" font-size="11" text-anchor="middle">decides what to do</text>
+        <text x="485" y="146" fill="#6ea8ff" font-size="10.5" text-anchor="middle">runs on Nebius</text>
 
         <!-- TTS -->
-        <rect x="605" y="86" rx="10" width="160" height="78" fill="#10211f" stroke="rgba(45,212,191,.5)"/>
-        <text x="685" y="112" fill="#2dd4bf" font-size="13" text-anchor="middle" font-weight="700">TTS</text>
-        <text x="685" y="131" fill="#cdd9e5" font-size="11" text-anchor="middle">Elliot voice</text>
-        <text x="685" y="147" fill="#8b949e" font-size="10.5" text-anchor="middle">text → speech</text>
+        <rect x="615" y="86" rx="10" width="150" height="78" fill="#10211f" stroke="rgba(45,212,191,.5)"/>
+        <text x="690" y="112" fill="#2dd4bf" font-size="13" text-anchor="middle" font-weight="700">TTS</text>
+        <text x="690" y="131" fill="#cdd9e5" font-size="11" text-anchor="middle">Elliot voice</text>
+        <text x="690" y="147" fill="#8b949e" font-size="10.5" text-anchor="middle">text → speech</text>
 
-        <!-- caller -> STT (audio in) -->
+        <!-- Nebius callout -->
+        <rect x="600" y="22" rx="8" width="180" height="0" fill="none"/>
+        <path d="M485,86 C485,30 560,30 600,30" fill="none" stroke="#6ea8ff" stroke-width="1.5" stroke-dasharray="3 3" marker-end="url(#ahn)"/>
+        <text x="610" y="26" fill="#6ea8ff" font-size="9.5">Vapi calls Nebius as its custom LLM</text>
+
+        <!-- caller -> STT -->
         <path d="M140,150 C165,150 175,125 203,125" fill="none" stroke="#2dd4bf" stroke-width="2" marker-end="url(#ahv)"/>
-        <text x="158" y="115" fill="#2dd4bf" font-size="10">audio in</text>
+        <text x="156" y="115" fill="#2dd4bf" font-size="10">audio in</text>
         <!-- STT -> LLM -->
-        <path d="M365,125 L403,125" fill="none" stroke="#7d8694" stroke-width="2" marker-end="url(#ah)"/>
+        <path d="M355,125 L398,125" fill="none" stroke="#7d8694" stroke-width="2" marker-end="url(#ah)"/>
         <!-- LLM -> TTS -->
-        <path d="M565,125 L603,125" fill="none" stroke="#7d8694" stroke-width="2" marker-end="url(#ah)"/>
-        <!-- TTS -> caller (audio out) -->
-        <path d="M765,140 C800,140 150,250 150,250 C120,250 100,210 100,208" fill="none" stroke="#2dd4bf" stroke-width="2" stroke-dasharray="0" marker-end="url(#ahv)"/>
-        <text x="600" y="232" fill="#2dd4bf" font-size="10">spoken answer with prices →  back to caller</text>
+        <path d="M570,125 L613,125" fill="none" stroke="#7d8694" stroke-width="2" marker-end="url(#ah)"/>
+        <!-- TTS -> caller -->
+        <path d="M765,140 C800,140 150,250 150,250 C120,250 100,210 100,208" fill="none" stroke="#2dd4bf" stroke-width="2" marker-end="url(#ahv)"/>
+        <text x="590" y="232" fill="#2dd4bf" font-size="10">spoken answer with prices →  back to caller</text>
 
         <!-- LLM down to tool -->
         <path d="M485,164 L485,238" fill="none" stroke="#a78bfa" stroke-width="2" marker-end="url(#aho)"/>
         <text x="497" y="200" fill="#a78bfa" font-size="11">tool call</text>
-        <text x="497" y="216" fill="#8b949e" font-size="10">search_products(query, category)</text>
+        <text x="497" y="216" fill="#8b949e" font-size="10">search_products / place_order</text>
 
-        <!-- Our tool handler -->
-        <rect x="335" y="250" rx="12" width="300" height="74" fill="rgba(167,139,250,.06)" stroke="rgba(167,139,250,.5)"/>
-        <text x="485" y="276" fill="#a78bfa" font-size="13" text-anchor="middle" font-weight="700">Our tool handler · FastAPI</text>
-        <text x="485" y="296" fill="#cdd9e5" font-size="11" text-anchor="middle">receives HTTP POST, runs the search</text>
-        <text x="485" y="312" fill="#8b949e" font-size="10.5" text-anchor="middle">app.py  ·  public HTTPS URL</text>
+        <!-- Insforge handler -->
+        <rect x="320" y="250" rx="12" width="330" height="74" fill="rgba(167,139,250,.06)" stroke="rgba(167,139,250,.5)"/>
+        <text x="485" y="276" fill="#a78bfa" font-size="13" text-anchor="middle" font-weight="700">Our tools · Insforge edge function</text>
+        <text x="485" y="296" fill="#cdd9e5" font-size="11" text-anchor="middle">serverless Deno function, stable HTTPS URL</text>
+        <text x="485" y="312" fill="#8b949e" font-size="10.5" text-anchor="middle">hedqzne5.function2.insforge.app/vapi-tools</text>
 
         <!-- tool -> catalog -->
         <path d="M485,324 L485,360" fill="none" stroke="#7d8694" stroke-width="2" marker-end="url(#ah)"/>
-        <!-- catalog -->
         <rect x="360" y="362" rx="12" width="250" height="66" fill="rgba(240,165,0,.06)" stroke="rgba(240,165,0,.5)"/>
-        <text x="485" y="388" fill="#f0a500" font-size="13" text-anchor="middle" font-weight="700">catalog.csv · 198 products</text>
+        <text x="485" y="388" fill="#f0a500" font-size="13" text-anchor="middle" font-weight="700">catalog · 198 products</text>
         <text x="485" y="408" fill="#8b949e" font-size="10.5" text-anchor="middle">snapshot of LocallySells master catalog</text>
 
-        <!-- return path tool -> LLM -->
-        <path d="M635,287 C720,287 720,125 567,125" fill="none" stroke="#a78bfa" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#aho)"/>
-        <text x="650" y="205" fill="#a78bfa" font-size="10">{ results:</text>
-        <text x="650" y="219" fill="#a78bfa" font-size="10">top 3 + prices }</text>
+        <!-- return path -->
+        <path d="M650,287 C730,287 730,125 572,125" fill="none" stroke="#a78bfa" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#aho)"/>
+        <text x="660" y="205" fill="#a78bfa" font-size="10">{ results:</text>
+        <text x="660" y="219" fill="#a78bfa" font-size="10">prices / order }</text>
       </svg>
       <p style="color:var(--muted); font-size:13.5px; margin-top:8px">
-        The caller never knows a tool was called. To them it is one smooth conversation. The orange and purple parts are the only thing we built. Everything teal is configuration we handed to Vapi.
+        The caller hears one smooth conversation. Behind it: Vapi (teal) handles voice, the brain runs on Nebius (blue), and our tools run on Insforge (purple). The only code we wrote is the purple function and the yellow catalog.
       </p>
     </div>
   </section>
 
-  <!-- 3. TOOL CONTRACT -->
+  <!-- TOOL CONTRACT -->
   <section>
-    <h2>The tool contract</h2>
-    <div class="lead">One tool, <code>search_products</code> — what goes in, what comes back</div>
+    <h2>The two tools</h2>
+    <div class="lead">What the agent can call, and what comes back</div>
     <div class="card">
       <div class="io">
         <div class="iobox">
-          <h4 style="color:var(--ours)">→ Vapi sends us (request)</h4>
-<pre><span class="c">// the LLM filled in these arguments</span>
-{
-  <span class="k">"message"</span>: {
-    <span class="k">"toolCallList"</span>: [{
-      <span class="k">"id"</span>: <span class="s">"call_abc123"</span>,
-      <span class="k">"function"</span>: {
-        <span class="k">"name"</span>: <span class="s">"search_products"</span>,
-        <span class="k">"arguments"</span>: {
-          <span class="k">"query"</span>: <span class="s">"marlboro red"</span>,
-          <span class="k">"category"</span>: <span class="s">"cigarettes"</span>
-        }
-      }
-    }]
-  }
-}</pre>
+          <h4 style="color:var(--data)">search_products → answer</h4>
+<pre><span class="c">// LLM args</span>
+{ <span class="k">"query"</span>: <span class="s">"marlboro red"</span>,
+  <span class="k">"category"</span>: <span class="s">"cigarettes"</span> }
+
+<span class="c">// returned (spoken)</span>
+<span class="s">"Found 2 matches. Top results:
+ - Marlboro Red King Size — $8.99 — Pack
+ - Marlboro Red Carton — $84.99"</span></pre>
         </div>
         <div class="iobox">
-          <h4 style="color:var(--data)">← We return (response)</h4>
-<pre>{
-  <span class="k">"results"</span>: [{
-    <span class="k">"toolCallId"</span>: <span class="s">"call_abc123"</span>,
-    <span class="k">"result"</span>: <span class="s">"Found 2 matches.
-      Top results:
-      - Marlboro Red King Size — $8.99 — Pack
-      - Marlboro Red Carton — $84.99 — Carton"</span>
-  }]
-}</pre>
+          <h4 style="color:var(--data)">place_order → confirmation</h4>
+<pre><span class="c">// LLM args (stateless: full list)</span>
+{ <span class="k">"items"</span>: [
+    {<span class="k">"name"</span>:<span class="s">"marlboro red"</span>,<span class="k">"quantity"</span>:<span class="n">2</span>},
+    {<span class="k">"name"</span>:<span class="s">"zyn cool mint"</span>,<span class="k">"quantity"</span>:<span class="n">1</span>} ],
+  <span class="k">"delivery_address"</span>: <span class="s">"123 Main St, LA"</span> }
+
+<span class="c">// returned (spoken)</span>
+<span class="s">"Order LS-HERM01 confirmed. Total
+ $23.47. ETA ~45 min. 21+ ID at door."</span></pre>
         </div>
       </div>
       <p style="color:var(--muted); font-size:13.5px; margin-top:14px">
-        The <code>toolCallId</code> must echo back so Vapi matches the answer to the question. The <code>result</code> is plain text the LLM reads, then it decides how to say it out loud (our system prompt tells it to summarize the top 3 and always include prices).
+        Both tools live at the same Insforge URL; the function reads the tool name from the Vapi request and routes. <code>place_order</code> is <b>stateless</b>: the agent gathers the items through the conversation and passes the whole list at once, so there's no cart state for a serverless platform to lose.
       </p>
     </div>
   </section>
 
-  <!-- 4. BOUNDARY: exposed vs hidden -->
+  <!-- BOUNDARY -->
   <section>
     <h2>What the agent can see vs. what stays hidden</h2>
     <div class="lead">The interface boundary</div>
     <div class="card">
-      <p style="margin-top:0; color:var(--muted)">Our tool mirrors exactly one LocallySells capability: catalog search. These are the only fields that cross the boundary into the voice agent.</p>
+      <p style="margin-top:0; color:var(--muted)">Our tools expose exactly one LocallySells capability: catalog search (plus a mock order). These are the only fields that cross into the voice agent.</p>
 
       <div style="margin-top:6px">
         <div style="font-size:13px; color:var(--ours); font-weight:700; text-transform:uppercase; letter-spacing:.5px">Inputs the agent controls</div>
         <div class="field-row">
-          <span class="chip in">query</span>
-          <span class="chip in">category</span>
-          <span class="chip in">limit</span>
+          <span class="chip in">query</span><span class="chip in">category</span><span class="chip in">limit</span>
+          <span class="chip in">items[]</span><span class="chip in">delivery_address</span>
         </div>
       </div>
 
@@ -296,8 +322,7 @@
         <div class="field-row">
           <span class="chip">name</span><span class="chip">brand</span><span class="chip">category</span>
           <span class="chip">price</span><span class="chip">format</span><span class="chip">flavor</span>
-          <span class="chip">sku</span><span class="chip">barcode</span><span class="chip">description</span>
-          <span class="chip">nicotine_strength</span>
+          <span class="chip">sku</span><span class="chip">barcode</span>
         </div>
       </div>
 
@@ -305,22 +330,21 @@
         <div class="t">⬛ LocallySells platform — abstracted away (the agent never sees any of this)</div>
         <div class="hidden-grid">
           <span class="hchip">Supabase database + RLS</span>
-          <span class="hchip">retailer / supplier / admin Next.js apps</span>
-          <span class="hchip">orders &amp; cart</span>
-          <span class="hchip">Stripe payments &amp; 3.5% fee</span>
+          <span class="hchip">retailer / supplier / admin apps</span>
+          <span class="hchip">real orders &amp; cart</span>
+          <span class="hchip">Stripe payments</span>
           <span class="hchip">Onfleet delivery</span>
           <span class="hchip">auth &amp; sessions</span>
-          <span class="hchip">profile_id / supplier lookups</span>
           <span class="hchip">the live /api/master-catalog/search route</span>
         </div>
         <p style="color:var(--muted); font-size:13px; margin:12px 0 0">
-          In production this same search runs as <code>GET /api/master-catalog/search?q=&amp;category=&amp;limit=</code> against Supabase. For the demo we copied the catalog to a CSV and replicated the search logic, so nothing depends on the live app being up on stage. The contract is identical, the agent would not know the difference.
+          In production this search runs as <code>GET /api/master-catalog/search</code> against Supabase. We copied the catalog to a snapshot and replicated the search logic, so the demo never depends on the live app. The contract is identical; the agent could not tell the difference.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- 5. CATALOG -->
+  <!-- CATALOG -->
   <section>
     <h2>The catalog the agent searches</h2>
     <div class="lead">198 real products across 7 categories</div>
@@ -333,64 +357,52 @@
       <div class="bar-row"><span class="cat-name">hookah</span><div class="bar-track"><div class="bar-fill" style="width:46%"></div></div><span class="num">20</span></div>
       <div class="bar-row"><span class="cat-name">cbd</span><div class="bar-track"><div class="bar-fill" style="width:35%"></div></div><span class="num">15</span></div>
 
-      <table>
-        <thead><tr><th>Column</th><th>Example</th><th>Used by the agent?</th></tr></thead>
-        <tbody>
-          <tr><td><code>name</code></td><td>Marlboro Red King Size</td><td><span class="tag e">spoken</span></td></tr>
-          <tr><td><code>brand</code></td><td>Marlboro</td><td><span class="tag e">searched</span></td></tr>
-          <tr><td><code>category</code></td><td>cigarettes</td><td><span class="tag e">filtered</span></td></tr>
-          <tr><td><code>price</code></td><td>8.99</td><td><span class="tag e">spoken</span></td></tr>
-          <tr><td><code>format</code> / <code>flavor</code></td><td>Pack · Cool Mint</td><td><span class="tag e">spoken</span></td></tr>
-          <tr><td><code>sku</code> / <code>barcode</code></td><td>MRL-RED-KS · 028000195328</td><td><span class="tag e">searched</span></td></tr>
-          <tr><td><code>confidence_score</code></td><td>90</td><td>ranks results (best first)</td></tr>
-        </tbody>
-      </table>
-      <p style="color:var(--muted); font-size:13px; margin-top:12px">
-        Search logic, ported one-to-one from production: case-insensitive substring match on name / brand / sku / barcode / flavor, optional category filter, a barcode exact-match shortcut, results ordered by <code>confidence_score</code> then name.
+      <p style="color:var(--muted); font-size:13px; margin-top:14px">
+        Search logic, ported one-to-one from production: case-insensitive substring match on name / brand / sku / barcode / flavor, optional category filter, a barcode exact-match shortcut, ordered by confidence then name. The 198 products are baked straight into the Insforge function, so it has zero external dependencies at call time.
       </p>
     </div>
   </section>
 
-  <!-- 6. DEPLOY -->
+  <!-- DEPLOY -->
   <section>
     <h2>Where it runs</h2>
-    <div class="lead">Hosting: live now, hardening next</div>
+    <div class="lead">Hosting: serverless and off your laptop</div>
     <div class="deploy">
       <div class="dcol now">
         <div class="state" style="color:var(--ok)">● LIVE NOW</div>
-        <h4>Local + cloudflared tunnel</h4>
+        <h4>Insforge edge function + Nebius brain</h4>
         <div class="flowmini">
-          <span class="seg">FastAPI (uv)</span><span class="arrow">→</span><span class="seg">cloudflared</span><span class="arrow">→</span><span class="seg">public HTTPS</span><span class="arrow">→</span><span class="seg" style="color:#2dd4bf">Vapi</span>
-        </div>
-        <p style="color:var(--muted); font-size:13px; margin-top:10px">Instant HTTPS, zero account, great for iterating. Downside: the URL is ephemeral, it dies if the laptop sleeps or the tunnel restarts.</p>
-      </div>
-      <div class="dcol">
-        <div class="state" style="color:var(--ours)">○ NEXT</div>
-        <h4>Insforge (stable URL) + Nebius (LLM)</h4>
-        <div class="flowmini">
-          <span class="seg" style="color:#E8601C">Insforge</span><span class="arrow">hosts</span><span class="seg">search_products</span>
+          <span class="seg" style="color:#2dd4bf">Vapi</span><span class="arrow">→ thinks on →</span><span class="seg" style="color:#6ea8ff">Nebius</span>
           <br>
-          <span class="seg" style="color:#E8601C">Nebius</span><span class="arrow">hosts</span><span class="seg">the thinking LLM (stretch)</span>
+          <span class="seg" style="color:#2dd4bf">Vapi</span><span class="arrow">→ tools on →</span><span class="seg" style="color:#a78bfa">Insforge</span><span class="arrow">→</span><span class="seg">catalog</span>
         </div>
-        <p style="color:var(--muted); font-size:13px; margin-top:10px">Moves the endpoint to a sponsor platform for a stable demo URL and the full sponsor story: Vapi spine, Insforge tool host, Nebius LLM.</p>
+        <p style="color:var(--muted); font-size:13px; margin-top:10px">Stable public URL, serverless, no laptop in the loop. LLM cost is paid by Nebius credits. This is the demo stack.</p>
+      </div>
+      <div class="dcol old">
+        <div class="state" style="color:var(--faint)">○ SUPERSEDED</div>
+        <h4>Local laptop + cloudflared tunnel</h4>
+        <div class="flowmini">
+          <span class="seg strike">FastAPI on laptop</span><span class="arrow">→</span><span class="seg strike">cloudflared</span><span class="arrow">→</span><span class="seg strike">gpt-4o</span>
+        </div>
+        <p style="color:var(--muted); font-size:13px; margin-top:10px">How we first proved the flow. Retired once Insforge + Nebius were wired, because the tunnel URL died whenever the laptop slept.</p>
       </div>
     </div>
   </section>
 
-  <!-- 7. TIERS -->
+  <!-- TIERS -->
   <section>
     <h2>Build tiers</h2>
-    <div class="lead">Voice search first, everything else is a bonus</div>
+    <div class="lead">Search and ordering both live; sales is a prompt away</div>
     <div class="tiers">
       <div class="tier done">
         <span class="badge">TIER 1 · DONE</span>
         <h4>Voice search</h4>
-        <p>"Do you have X?" → tool → catalog → spoken answer with prices. The demo centerpiece, working end to end.</p>
+        <p>"Do you have X?" → tool → catalog → spoken answer with prices. The demo centerpiece.</p>
       </div>
-      <div class="tier">
-        <span class="badge next">TIER 2 · STRETCH</span>
+      <div class="tier done">
+        <span class="badge">TIER 2 · DONE</span>
         <h4>Voice ordering</h4>
-        <p>Add an <code>add_to_cart</code> / <code>place_order</code> tool. More moving parts (cart state, address, order write), only if T1 stays solid.</p>
+        <p>"Add two and deliver to 123 Main St" → <code>place_order</code> → order number + ETA + 21+ reminder. Stateless and serverless-safe.</p>
       </div>
       <div class="tier">
         <span class="badge later">TIER 3 · PROMPT ONLY</span>
@@ -400,20 +412,21 @@
     </div>
   </section>
 
-  <!-- FOOTER REFERENCE -->
+  <!-- REFERENCE -->
   <section>
     <h2>Reference</h2>
     <div class="card">
       <div class="ref">
         <span class="key">Vapi assistant</span><span class="val">LocallySells Voice Search · d52222e2-8657-4035-9a84-6068eee88de0</span>
-        <span class="key">Vapi tool</span><span class="val">search_products · 31dc734f-1237-4ea0-8ffa-d1ece86ffc2a</span>
-        <span class="key">Tool handler</span><span class="val">app.py  (FastAPI, single file)</span>
-        <span class="key">Catalog</span><span class="val">catalog.csv  (198 rows, from LocalGrid123/locallysells)</span>
-        <span class="key">System prompt</span><span class="val">system-prompt.md  (21+ rule, summarize top 3, always say prices)</span>
+        <span class="key">Brain (Nebius)</span><span class="val">custom-llm · meta-llama/Llama-3.3-70B-Instruct</span>
+        <span class="key">Tools</span><span class="val">search_products · 31dc734f…  +  place_order · 64abd06d…</span>
+        <span class="key">Tool host (Insforge)</span><span class="val">https://hedqzne5.function2.insforge.app/vapi-tools</span>
+        <span class="key">Function source</span><span class="val">insforge/functions/vapi-tools/index.ts  (Deno, catalog inlined)</span>
+        <span class="key">Repo</span><span class="val">github.com/rohitmujumdar/locallysells-voice-search</span>
         <span class="key">Try it</span><span class="val">dashboard.vapi.ai → Assistants → LocallySells Voice Search → Talk to Assistant</span>
       </div>
     </div>
-    <p class="foot">Built for the multimodal hackathon. Voice spine: Vapi. Tool + data: ours. LocallySells internals: deliberately abstracted, the agent only ever touches catalog search.</p>
+    <p class="foot">Multimodal hackathon build. Vapi (voice) + Nebius (brain) + Insforge (tools), serverless and off-laptop. LocallySells internals stay abstracted; the agent only ever touches catalog search and a mock order.</p>
   </section>
 
 </div>
