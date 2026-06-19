@@ -125,7 +125,7 @@ function handleTool(name: string, args: Record<string, unknown>): string {
   return `Unknown tool: ${name}`;
 }
 
-Deno.serve(async (req: Request) => {
+export default async function handler(req: Request) {
   if (req.method === "GET") {
     return Response.json({ ok: true, catalog_size: CATALOG.length });
   }
@@ -146,4 +146,4 @@ Deno.serve(async (req: Request) => {
   });
 
   return Response.json({ results });
-});
+}
