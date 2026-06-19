@@ -77,7 +77,7 @@ http(f"/assistant/{ASSISTANT_ID}", "PATCH", {
     "model": {
         "provider": "custom-llm",
         "url": "https://api.tokenfactory.nebius.com/v1",
-        "model": "meta-llama/Llama-3.3-70B-Instruct",
+        "model": os.environ.get("NEBIUS_MODEL", "Qwen/Qwen3-30B-A3B-Instruct-2507"),
         "temperature": 0.4,
         "messages": [{"role": "system", "content": PROMPT}],
         "toolIds": [SEARCH_TOOL_ID, PLACE_TOOL_ID],

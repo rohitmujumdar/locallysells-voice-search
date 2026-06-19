@@ -70,12 +70,12 @@ ids = [m["id"] for m in models]
 print(f"Nebius exposes {len(ids)} models.")
 
 PREFER = [
-    "meta-llama/Llama-3.3-70B-Instruct-fast",
+    # Fast, low-latency tool-callers first — voice needs quick time-to-first-token.
+    # The 70B Llama was timing out mid-call (pipeline-error-custom-llm-llm-failed).
+    "Qwen/Qwen3-30B-A3B-Instruct-2507",
+    "openai/gpt-oss-120b-fast",
+    "Qwen/Qwen3-32B",
     "meta-llama/Llama-3.3-70B-Instruct",
-    "Qwen/Qwen2.5-72B-Instruct-fast",
-    "Qwen/Qwen2.5-72B-Instruct",
-    "meta-llama/Meta-Llama-3.1-70B-Instruct-fast",
-    "meta-llama/Meta-Llama-3.1-70B-Instruct",
 ]
 model_id = next((m for m in PREFER if m in ids), None)
 if not model_id:
