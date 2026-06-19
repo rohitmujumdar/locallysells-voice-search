@@ -132,9 +132,9 @@
     <div class="pills">
       <span class="pill ok">Tier 1 search <b>LIVE</b></span>
       <span class="pill ok">Tier 2 ordering <b>LIVE</b></span>
-      <span class="pill ok">Hosting <b>serverless, off-laptop</b></span>
+      <span class="pill ok">Semantic search <b>LIVE</b></span>
       <span class="pill">Catalog <b>198 products · 7 categories</b></span>
-      <span class="pill">Brain <b>Nebius · Llama 3.3 70B</b></span>
+      <span class="pill">Brain <b>Nebius · Qwen3-30B-A3B</b></span>
     </div>
     <div class="legend">
       <span><i class="dot" style="background:var(--vapi)"></i> Vapi (voice)</span>
@@ -358,7 +358,7 @@
       <div class="bar-row"><span class="cat-name">cbd</span><div class="bar-track"><div class="bar-fill" style="width:35%"></div></div><span class="num">15</span></div>
 
       <p style="color:var(--muted); font-size:13px; margin-top:14px">
-        Search logic, ported one-to-one from production: case-insensitive substring match on name / brand / sku / barcode / flavor, optional category filter, a barcode exact-match shortcut, ordered by confidence then name. The 198 products are baked straight into the Insforge function, so it has zero external dependencies at call time.
+        Search is <b style="color:var(--nebius)">semantic</b>: every product is embedded once with Nebius (Qwen3-Embedding-8B, 512-dim, precomputed). At query time the function embeds the caller's phrase and ranks the catalog by cosine similarity, so "a smooth light cigarette" finds Marlboro Lights and "an easy starter vape" finds the SMOK Novo kit. A keyword-hybrid boost keeps exact brand mentions on top, and it falls back to keyword search if embeddings ever fail.
       </p>
     </div>
   </section>
@@ -418,7 +418,8 @@
     <div class="card">
       <div class="ref">
         <span class="key">Vapi assistant</span><span class="val">LocallySells Voice Search · d52222e2-8657-4035-9a84-6068eee88de0</span>
-        <span class="key">Brain (Nebius)</span><span class="val">custom-llm · meta-llama/Llama-3.3-70B-Instruct</span>
+        <span class="key">Brain (Nebius)</span><span class="val">custom-llm · Qwen3-30B-A3B-Instruct</span>
+        <span class="key">Embeddings (Nebius)</span><span class="val">Qwen3-Embedding-8B · 512-dim · semantic search</span>
         <span class="key">Tools</span><span class="val">search_products · 31dc734f…  +  place_order · 64abd06d…</span>
         <span class="key">Tool host (Insforge)</span><span class="val">https://hedqzne5.function2.insforge.app/vapi-tools</span>
         <span class="key">Function source</span><span class="val">insforge/functions/vapi-tools/index.ts  (Deno, catalog inlined)</span>
