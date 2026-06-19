@@ -1,0 +1,199 @@
+handle,name,brand,category,description,sku,barcode,price,format,flavor,nicotine_strength,images,source,confidence_score
+marlboro-red-king-size,Marlboro Red King Size,Marlboro,cigarettes,Full-flavor king size cigarettes. Pack of 20.,MRL-RED-KS,028000195328,8.99,Pack,Regular,,,,tobacco_catalog,90
+marlboro-red-king-carton,Marlboro Red King Size Carton,Marlboro,cigarettes,Full-flavor king size cigarettes. Carton of 10 packs.,MRL-RED-CAR,028000195311,84.99,Carton,Regular,,,,tobacco_catalog,90
+marlboro-gold-king-size,Marlboro Gold King Size,Marlboro,cigarettes,Smooth lighter taste. Pack of 20.,MRL-GLD-KS,028000195359,8.99,Pack,Regular,,,,tobacco_catalog,90
+marlboro-lights-100s,Marlboro Lights 100s,Marlboro,cigarettes,Light 100s cigarettes. Pack of 20.,MRL-LGT-100,028000195342,9.49,Pack,Regular,,,,tobacco_catalog,90
+marlboro-menthol-green,Marlboro Menthol King Size,Marlboro,cigarettes,Cool menthol king size cigarettes.,MRL-MNT-KS,028000195366,8.99,Pack,Menthol,,,,tobacco_catalog,90
+marlboro-silver-king,Marlboro Silver King Size,Marlboro,cigarettes,Ultra-smooth silver blend. Pack of 20.,MRL-SLV-KS,028000195373,8.99,Pack,Regular,,,,tobacco_catalog,85
+marlboro-black-menthol,Marlboro Black Menthol,Marlboro,cigarettes,Bold menthol with smooth finish.,MRL-BLK-MNT,028000195380,9.29,Pack,Menthol,,,,tobacco_catalog,85
+newport-menthol-king,Newport Menthol King Size,Newport,cigarettes,America's best-selling menthol cigarette.,NWP-MNT-KS,012400000059,9.29,Pack,Menthol,,,,tobacco_catalog,92
+newport-menthol-100s,Newport Menthol 100s,Newport,cigarettes,Newport menthol in 100mm length.,NWP-MNT-100,012400000066,9.69,Pack,Menthol,,,,tobacco_catalog,92
+newport-non-menthol-king,Newport Non-Menthol King,Newport,cigarettes,Newport bold non-menthol king size.,NWP-NM-KS,012400000073,9.29,Pack,Regular,,,,tobacco_catalog,88
+newport-red-100s,Newport Red 100s,Newport,cigarettes,Full-flavor Newport Red 100mm cigarettes.,NWP-RED-100,012400000080,9.69,Pack,Regular,,,,tobacco_catalog,85
+camel-blue-king,Camel Blue King Size,Camel,cigarettes,Smooth Camel Blue blend. Pack of 20.,CAM-BLU-KS,040000000014,8.99,Pack,Regular,,,,tobacco_catalog,90
+camel-turkish-royale,Camel Turkish Royale,Camel,cigarettes,Turkish and domestic tobacco blend.,CAM-TRK-RY,040000000021,9.29,Pack,Regular,,,,tobacco_catalog,88
+camel-crush-menthol,Camel Crush Menthol,Camel,cigarettes,Crushable menthol capsule. Switch on demand.,CAM-CRH-MNT,040000000038,9.49,Pack,Menthol,,,,tobacco_catalog,90
+camel-filters-king,Camel Filters King Size,Camel,cigarettes,Classic Camel blend with filter. Pack of 20.,CAM-FLT-KS,040000000045,8.99,Pack,Regular,,,,tobacco_catalog,88
+winston-red-king,Winston Red King Size,Winston,cigarettes,Full-flavor Winston. Pack of 20.,WIN-RED-KS,070300021201,8.49,Pack,Regular,,,,tobacco_catalog,85
+winston-blue-king,Winston Blue King Size,Winston,cigarettes,Smooth Winston Blue. Pack of 20.,WIN-BLU-KS,070300021218,8.49,Pack,Regular,,,,tobacco_catalog,85
+pall-mall-red-king,Pall Mall Red King Size,Pall Mall,cigarettes,Full-flavor Pall Mall. Pack of 20.,PAL-RED-KS,050300021101,7.99,Pack,Regular,,,,tobacco_catalog,88
+pall-mall-blue-king,Pall Mall Blue King Size,Pall Mall,cigarettes,Light Pall Mall Blue. Pack of 20.,PAL-BLU-KS,050300021118,7.99,Pack,Regular,,,,tobacco_catalog,88
+pall-mall-menthol-king,Pall Mall Menthol King Size,Pall Mall,cigarettes,Cool menthol Pall Mall. Pack of 20.,PAL-MNT-KS,050300021125,7.99,Pack,Menthol,,,,tobacco_catalog,85
+pall-mall-orange-king,Pall Mall Orange King Size,Pall Mall,cigarettes,Ultra-light Pall Mall Orange.,PAL-ORG-KS,050300021132,7.99,Pack,Regular,,,,tobacco_catalog,82
+american-spirit-yellow,American Spirit Yellow,American Spirit,cigarettes,Additive-free natural blend. Pack of 20.,AMS-YEL-KS,084107100012,11.99,Pack,Regular,,,,tobacco_catalog,90
+american-spirit-sky-blue,American Spirit Sky Blue,American Spirit,cigarettes,Light additive-free blend. Pack of 20.,AMS-SKY-KS,084107100029,11.99,Pack,Regular,,,,tobacco_catalog,90
+american-spirit-turquoise,American Spirit Turquoise Menthol,American Spirit,cigarettes,Organic menthol additive-free cigarettes.,AMS-TRQ-KS,084107100036,12.49,Pack,Menthol,,,,tobacco_catalog,88
+american-spirit-perique,American Spirit Perique Dark Brown,American Spirit,cigarettes,Full-bodied perique blend. Pack of 20.,AMS-PRQ-KS,084107100043,12.49,Pack,Regular,,,,tobacco_catalog,85
+kool-menthol-king,Kool Menthol King Size,Kool,cigarettes,Smooth menthol cigarettes. Pack of 20.,KOL-MNT-KS,030000111201,8.49,Pack,Menthol,,,,tobacco_catalog,85
+kool-mild-menthol,Kool Mild Menthol King,Kool,cigarettes,Milder menthol blend. Pack of 20.,KOL-MLD-KS,030000111218,8.49,Pack,Menthol,,,,tobacco_catalog,82
+lucky-strike-original,Lucky Strike Original,Lucky Strike,cigarettes,Iconic original Lucky Strike blend.,LKY-OG-KS,070300011101,8.79,Pack,Regular,,,,tobacco_catalog,82
+virginia-slims-120s,Virginia Slims 120s,Virginia Slims,cigarettes,Slender 120mm cigarettes. Pack of 20.,VGS-120-REG,028000455011,9.99,120s,Regular,,,,tobacco_catalog,80
+capri-menthol-100s,Capri Menthol 100s,Capri,cigarettes,Ultra-slim menthol cigarettes.,CAP-MNT-100,028000456018,9.49,100s,Menthol,,,,tobacco_catalog,78
+swisher-sweets-original,Swisher Sweets Original Cigarillos 2-Pack,Swisher Sweets,cigars,"Classic sweet cigarillos, 2-pack.",SWS-OG-2PK,076631900015,2.49,Cigarillo,Original,,,,tobacco_catalog,92
+swisher-sweets-grape,Swisher Sweets Grape Cigarillos 2-Pack,Swisher Sweets,cigars,Grape-flavored cigarillos. 2-pack.,SWS-GRP-2PK,076631900022,2.49,Cigarillo,Grape,,,,tobacco_catalog,92
+swisher-sweets-strawberry,Swisher Sweets Strawberry Cigarillos 2-Pack,Swisher Sweets,cigars,Strawberry-flavored cigarillos. 2-pack.,SWS-STR-2PK,076631900039,2.49,Cigarillo,Strawberry,,,,tobacco_catalog,90
+swisher-sweets-peach,Swisher Sweets Peach Cigarillos 2-Pack,Swisher Sweets,cigars,Peach-flavored cigarillos. 2-pack.,SWS-PCH-2PK,076631900046,2.49,Cigarillo,Peach,,,,tobacco_catalog,90
+swisher-sweets-tropical,Swisher Sweets Tropical Fusion 2-Pack,Swisher Sweets,cigars,Tropical blend cigarillos. 2-pack.,SWS-TRP-2PK,076631900053,2.49,Cigarillo,Tropical,,,,tobacco_catalog,88
+swisher-sweets-white-grape,Swisher Sweets White Grape 2-Pack,Swisher Sweets,cigars,Sweet white grape cigarillos.,SWS-WGR-2PK,076631900060,2.49,Cigarillo,White Grape,,,,tobacco_catalog,88
+swisher-sweets-blueberry,Swisher Sweets Blueberry 2-Pack,Swisher Sweets,cigars,Blueberry cigarillos. 2-pack.,SWS-BLB-2PK,076631900077,2.49,Cigarillo,Blueberry,,,,tobacco_catalog,88
+swisher-sweets-sweet-tea,Swisher Sweets Sweet Tea 2-Pack,Swisher Sweets,cigars,Sweet tea flavored cigarillos.,SWS-STT-2PK,076631900084,2.49,Cigarillo,Sweet Tea,,,,tobacco_catalog,85
+backwoods-honey,Backwoods Honey Cigars 5-Pack,Backwoods,cigars,Natural leaf honey cigars. 5-pack.,BWD-HON-5PK,040000001234,6.99,Cigar,Honey,,,,tobacco_catalog,90
+backwoods-sweet-aromatic,Backwoods Sweet Aromatic 5-Pack,Backwoods,cigars,Classic sweet aromatic backwoods. 5-pack.,BWD-SWT-5PK,040000001241,6.99,Cigar,Sweet Aromatic,,,,tobacco_catalog,90
+backwoods-honey-berry,Backwoods Honey Berry 5-Pack,Backwoods,cigars,Honey berry natural leaf cigars.,BWD-HNB-5PK,040000001258,6.99,Cigar,Honey Berry,,,,tobacco_catalog,90
+backwoods-russian-cream,Backwoods Russian Cream 5-Pack,Backwoods,cigars,Smooth Russian cream cigars.,BWD-RSC-5PK,040000001265,7.49,Cigar,Russian Cream,,,,tobacco_catalog,90
+backwoods-dark-stout,Backwoods Dark Stout 5-Pack,Backwoods,cigars,Bold dark stout natural leaf cigars.,BWD-DST-5PK,040000001272,7.49,Cigar,Dark Stout,,,,tobacco_catalog,88
+black-mild-original,Black & Mild Original Cigars,Black & Mild,cigars,Original pipe-tobacco cigars. 10-count.,BLM-OG-10,041000000012,12.99,Cigarillo,Original,,,,tobacco_catalog,90
+black-mild-wine,Black & Mild Wine Cigars,Black & Mild,cigars,Wine-flavored pipe-tobacco cigars. 10-count.,BLM-WNE-10,041000000029,12.99,Cigarillo,Wine,,,,tobacco_catalog,90
+black-mild-apple,Black & Mild Apple Cigars,Black & Mild,cigars,Apple-flavored pipe-tobacco cigars.,BLM-APL-10,041000000036,12.99,Cigarillo,Apple,,,,tobacco_catalog,88
+black-mild-cream,Black & Mild Cream Cigars,Black & Mild,cigars,Smooth cream flavored cigars. 10-count.,BLM-CRM-10,041000000043,12.99,Cigarillo,Cream,,,,tobacco_catalog,88
+dutch-masters-original,Dutch Masters Original Palma 5-Pack,Dutch Masters,cigars,Classic Dutch Masters palma shape.,DTM-OG-5PK,042000000011,7.99,Cigar,Original,,,,tobacco_catalog,88
+dutch-masters-palma,Dutch Masters Palma Cigar 5-Pack,Dutch Masters,cigars,Natural wrapper palma cigars.,DTM-PLM-5PK,042000000028,7.99,Cigar,Original,,,,tobacco_catalog,85
+dutch-masters-berry,Dutch Masters Berry Fusion 5-Pack,Dutch Masters,cigars,Berry-flavored Dutch Masters cigars.,DTM-BRY-5PK,042000000035,7.99,Cigar,Berry,,,,tobacco_catalog,85
+white-owl-original,White Owl Original Cigarillos 5-Pack,White Owl,cigars,Classic White Owl cigarillos. 5-pack.,WOW-OG-5PK,043000000015,6.49,Cigarillo,Original,,,,tobacco_catalog,85
+white-owl-grape,White Owl Grape Cigarillos 5-Pack,White Owl,cigars,Grape White Owl cigarillos. 5-pack.,WOW-GRP-5PK,043000000022,6.49,Cigarillo,Grape,,,,tobacco_catalog,85
+white-owl-platinum,White Owl Platinum Cigarillos 5-Pack,White Owl,cigars,Ultra-smooth platinum blend.,WOW-PLT-5PK,043000000039,6.49,Cigarillo,Original,,,,tobacco_catalog,82
+phillies-blunt,Phillies Blunt Cigars 5-Pack,Phillies,cigars,Classic Phillies Blunt. 5-pack.,PHI-BLT-5PK,044000000011,5.99,Blunt,Original,,,,tobacco_catalog,85
+phillies-titan-natural,Phillies Titan Natural Cigars 5-Pack,Phillies,cigars,Titan size natural tobacco cigars.,PHI-TTN-5PK,044000000028,6.49,Cigar,Natural,,,,tobacco_catalog,82
+hyde-rebel-4500-mango-ice,Hyde Rebel Recharge 4500 Mango Ice,Hyde,vape,5% nicotine rechargeable disposable. 4500 puffs.,HYD-RBL-4500-MGI,,14.99,Disposable,Mango Ice,5%,,tobacco_catalog,85
+hyde-rebel-4500-watermelon,Hyde Rebel Recharge 4500 Watermelon Ice,Hyde,vape,5% nicotine rechargeable disposable. 4500 puffs.,HYD-RBL-4500-WTI,,14.99,Disposable,Watermelon Ice,5%,,tobacco_catalog,85
+hyde-rebel-4500-strawberry,Hyde Rebel Recharge 4500 Strawberry Banana,Hyde,vape,5% nicotine rechargeable disposable. 4500 puffs.,HYD-RBL-4500-STB,,14.99,Disposable,Strawberry Banana,5%,,tobacco_catalog,85
+hyde-edge-3300-blue-razz,Hyde Edge Recharge 3300 Blue Razz Ice,Hyde,vape,5% nicotine rechargeable disposable. 3300 puffs.,HYD-EDG-3300-BRI,,12.99,Disposable,Blue Razz Ice,5%,,tobacco_catalog,82
+hyde-iq-recharge-aloe,Hyde IQ Recharge Aloe Grape,Hyde,vape,Rechargeable disposable vape. Aloe grape flavor.,HYD-IQ-ALG,,13.99,Disposable,Aloe Grape,5%,,tobacco_catalog,80
+elf-bar-bc5000-watermelon-ice,Elf Bar BC5000 Watermelon Ice,Elf Bar,vape,5% nicotine. 5000 puffs. Rechargeable.,ELF-BC5K-WTI,019962198121,15.99,Disposable,Watermelon Ice,5%,,tobacco_catalog,92
+elf-bar-bc5000-blue-razz-ice,Elf Bar BC5000 Blue Razz Ice,Elf Bar,vape,5% nicotine. 5000 puffs. Rechargeable.,ELF-BC5K-BRI,019962198138,15.99,Disposable,Blue Razz Ice,5%,,tobacco_catalog,92
+elf-bar-bc5000-strawberry-mango,Elf Bar BC5000 Strawberry Mango,Elf Bar,vape,5% nicotine. 5000 puffs. Rechargeable.,ELF-BC5K-STM,019962198145,15.99,Disposable,Strawberry Mango,5%,,tobacco_catalog,90
+elf-bar-bc5000-peach-mango-watermelon,Elf Bar BC5000 Peach Mango Watermelon,Elf Bar,vape,5% nicotine. 5000 puffs. Rechargeable.,ELF-BC5K-PMW,019962198152,15.99,Disposable,Peach Mango Watermelon,5%,,tobacco_catalog,90
+elf-bar-te5000-cool-mint,Elf Bar TE5000 Cool Mint,Elf Bar,vape,5% nicotine. 5000 puffs. Cool mint flavor.,ELF-TE5K-CM,019962198169,16.99,Disposable,Cool Mint,5%,,tobacco_catalog,88
+lost-mary-os5000-strawberry-ice,Lost Mary OS5000 Strawberry Ice,Lost Mary,vape,5% nicotine. 5000 puffs. Rechargeable.,LSM-OS5K-STI,,15.99,Disposable,Strawberry Ice,5%,,tobacco_catalog,88
+lost-mary-os5000-blue-razz-ice,Lost Mary OS5000 Blue Razz Ice,Lost Mary,vape,5% nicotine. 5000 puffs. Rechargeable.,LSM-OS5K-BRI,,15.99,Disposable,Blue Razz Ice,5%,,tobacco_catalog,88
+lost-mary-mo5000-peach-mango,Lost Mary MO5000 Peach Mango,Lost Mary,vape,5% nicotine. 5000 puffs. Rechargeable.,LSM-MO5K-PMG,,15.99,Disposable,Peach Mango,5%,,tobacco_catalog,85
+geek-bar-pulse-9000-strawberry,Geek Bar Pulse 9000 Strawberry Burst,Geek Bar,vape,5% nicotine. 9000 puffs. Dual-mesh coil.,GKB-PLS-9K-STB,,18.99,Disposable,Strawberry Burst,5%,,tobacco_catalog,88
+geek-bar-pulse-9000-watermelon,Geek Bar Pulse 9000 Watermelon Ice,Geek Bar,vape,5% nicotine. 9000 puffs. Dual-mesh coil.,GKB-PLS-9K-WTI,,18.99,Disposable,Watermelon Ice,5%,,tobacco_catalog,88
+geek-bar-b5000-peach-mango,Geek Bar B5000 Peach Mango,Geek Bar,vape,5% nicotine. 5000 puffs disposable vape.,GKB-B5K-PMG,,15.99,Disposable,Peach Mango,5%,,tobacco_catalog,85
+geek-bar-meloso-9000-grape,Geek Bar Meloso Max 9000 Grape Ice,Geek Bar,vape,5% nicotine. 9000 puffs. Grape Ice.,GKB-MLO-9K-GI,,18.99,Disposable,Grape Ice,5%,,tobacco_catalog,85
+juul-pods-virginia-tobacco,JUUL Pods Virginia Tobacco 4-Pack,JUUL,vape,Virginia Tobacco flavor pods. 4-pack. 5% nicotine.,JUL-POD-VT,854673006006,16.99,Pods,Virginia Tobacco,5%,,tobacco_catalog,95
+juul-pods-cool-mint,JUUL Pods Cool Mint 4-Pack,JUUL,vape,Cool mint flavor pods. 4-pack. 5% nicotine.,JUL-POD-CM,854673006013,16.99,Pods,Cool Mint,5%,,tobacco_catalog,95
+juul-pods-crisp-menthol,JUUL Pods Crisp Menthol 4-Pack,JUUL,vape,Crisp menthol pods. 4-pack. 5% nicotine.,JUL-POD-CMP,854673006020,16.99,Pods,Crisp Menthol,5%,,tobacco_catalog,92
+juul-device-starter-kit,JUUL Device Starter Kit,JUUL,vape,JUUL device with USB charging dock.,JUL-DEV-KIT,854673006037,34.99,Device,N/A,5%,,tobacco_catalog,92
+vuse-alto-menthol,Vuse Alto Menthol Pod Pack,Vuse,vape,Menthol pods for Vuse Alto. 2-pack. 5% nicotine.,VSE-ALT-MNT,,13.99,Pods,Menthol,5%,,tobacco_catalog,88
+vuse-alto-tobacco,Vuse Alto Original Tobacco Pod Pack,Vuse,vape,Original tobacco pods. 2-pack. 5% nicotine.,VSE-ALT-OT,,13.99,Pods,Original Tobacco,5%,,tobacco_catalog,88
+vuse-go-1500-menthol,Vuse GO 1500 Menthol Disposable,Vuse,vape,5% nicotine. 1500 puffs. Menthol.,VSE-GO-1500-MNT,,11.99,Disposable,Menthol,5%,,tobacco_catalog,85
+smok-nord-4-starter-kit,SMOK Nord 4 Starter Kit,SMOK,vape,"80W pod mod kit, adjustable airflow, 2000mAh battery.",SMK-NRD4-KIT,,39.99,Device Kit,N/A,N/A,,tobacco_catalog,88
+smok-novo-4-starter-kit,SMOK Novo 4 Starter Kit,SMOK,vape,"25W pod system, 1 ohm coil included.",SMK-NOV4-KIT,,29.99,Device Kit,N/A,N/A,,tobacco_catalog,88
+uwell-caliburn-g2-kit,Uwell Caliburn G2 Starter Kit,Uwell,vape,"18W pod system, Pro-FOCS flavor technology.",UWL-CLG2-KIT,,34.99,Device Kit,N/A,N/A,,tobacco_catalog,88
+uwell-caliburn-a2-kit,Uwell Caliburn A2 Starter Kit,Uwell,vape,"15W pod system, 520mAh battery.",UWL-CLA2-KIT,,24.99,Device Kit,N/A,N/A,,tobacco_catalog,88
+fume-extra-2000-mango,Fume Extra 2000 Mango,Fume,vape,5% nicotine. 2000 puffs. Mango.,FME-XTR-2K-MGO,,9.99,Disposable,Mango,5%,,tobacco_catalog,82
+fume-ultra-2500-tropical,Fume Ultra 2500 Tropical Rainbow,Fume,vape,5% nicotine. 2500 puffs. Tropical Rainbow.,FME-ULT-2500-TR,,10.99,Disposable,Tropical Rainbow,5%,,tobacco_catalog,82
+fume-infinity-3500-lush-ice,Fume Infinity 3500 Lush Ice,Fume,vape,5% nicotine. 3500 puffs. Lush Ice.,FME-INF-3500-LI,,12.99,Disposable,Lush Ice,5%,,tobacco_catalog,82
+fume-unlimited-7000-blue-razz,Fume Unlimited 7000 Blue Razz,Fume,vape,5% nicotine. 7000 puffs. Blue Razz.,FME-UNL-7000-BR,,16.99,Disposable,Blue Razz,5%,,tobacco_catalog,80
+puffbar-flow-mango,Puff Bar Flow 1000 Mango,Puff Bar,vape,5% nicotine. 1000 puffs. Mango.,PFB-FLW-1K-MGO,,9.99,Disposable,Mango,5%,,tobacco_catalog,85
+puffbar-flow-peach-ice,Puff Bar Flow 1000 Peach Ice,Puff Bar,vape,5% nicotine. 1000 puffs. Peach Ice.,PFB-FLW-1K-PCI,,9.99,Disposable,Peach Ice,5%,,tobacco_catalog,85
+voopoo-drag-s-kit,VooPoo Drag S Pod Mod Kit,VooPoo,vape,"60W pod mod, GENE.AI chip, 2500mAh battery.",VPD-DGS-KIT,,44.99,Device Kit,N/A,N/A,,tobacco_catalog,88
+voopoo-argus-p1-kit,VooPoo Argus P1 Pod Kit,VooPoo,vape,"20W pod system, leather chassis.",VPD-AGP1-KIT,,29.99,Device Kit,N/A,N/A,,tobacco_catalog,85
+mr-fog-max-pro-2000-grape,Mr. Fog Max Pro 2000 Grape,Mr. Fog,vape,5% nicotine. 2000 puffs. Grape flavor.,MRF-MAX-2K-GRP,,10.99,Disposable,Grape,5%,,tobacco_catalog,80
+air-bar-diamond-5000-mango-peach,Air Bar Diamond 5000 Mango Peach,Air Bar,vape,5% nicotine. 5000 puffs. Mango Peach.,ABR-DIA-5K-MPH,,14.99,Disposable,Mango Peach,5%,,tobacco_catalog,82
+breeze-pro-2000-mint,Breeze Pro 2000 Mint,Breeze,vape,6% nicotine. 2000 puffs. Cool Mint.,BRZ-PRO-2K-MT,,10.99,Disposable,Cool Mint,6%,,tobacco_catalog,80
+raz-ca6000-strawberry-watermelon,RAZ CA6000 Strawberry Watermelon,RAZ,vape,5% nicotine. 6000 puffs. Rechargeable.,RAZ-CA6K-SWM,,16.99,Disposable,Strawberry Watermelon,5%,,tobacco_catalog,80
+elf-bar-bc3500-banana-ice,Elf Bar BC3500 Banana Ice,Elf Bar,vape,5% nicotine. 3500 puffs. Banana Ice.,ELF-BC35-BNI,,13.99,Disposable,Banana Ice,5%,,tobacco_catalog,88
+bidi-stick-classic-menthol,Bidi Stick Classic Menthol,Bidi Vapor,vape,6% nicotine. Menthol disposable.,BDV-CLS-MNT,,9.99,Disposable,Menthol,6%,,tobacco_catalog,78
+hyde-curve-max-2500-ice-cream,Hyde Curve Max 2500 Ice Cream,Hyde,vape,5% nicotine. 2500 puffs. Ice Cream.,HYD-CRV-2500-IC,,11.99,Disposable,Ice Cream,5%,,tobacco_catalog,80
+al-fakher-double-apple-250g,Al Fakher Double Apple 250g,Al Fakher,hookah,Classic double apple hookah tobacco. 250g.,ALF-DBL-APL-250,6925508000015,12.99,Shisha,Double Apple,,,,tobacco_catalog,92
+al-fakher-mint-250g,Al Fakher Mint 250g,Al Fakher,hookah,Fresh mint hookah tobacco. 250g.,ALF-MNT-250,6925508000022,12.99,Shisha,Mint,,,,tobacco_catalog,92
+al-fakher-grape-250g,Al Fakher Grape 250g,Al Fakher,hookah,Sweet grape hookah tobacco. 250g.,ALF-GRP-250,6925508000039,12.99,Shisha,Grape,,,,tobacco_catalog,90
+al-fakher-watermelon-250g,Al Fakher Watermelon 250g,Al Fakher,hookah,Refreshing watermelon hookah tobacco. 250g.,ALF-WTM-250,6925508000046,12.99,Shisha,Watermelon,,,,tobacco_catalog,90
+al-fakher-blueberry-250g,Al Fakher Blueberry 250g,Al Fakher,hookah,Sweet blueberry hookah tobacco. 250g.,ALF-BLB-250,6925508000053,12.99,Shisha,Blueberry,,,,tobacco_catalog,90
+al-fakher-two-apple-50g,Al Fakher Two Apple 50g,Al Fakher,hookah,Classic two apple hookah tobacco. 50g.,ALF-DBL-APL-50,6925508000060,4.99,Shisha,Double Apple,,,,tobacco_catalog,88
+starbuzz-blue-mist-250g,Starbuzz Blue Mist 250g,Starbuzz,hookah,Popular blue mist blend. 250g.,SBZ-BLM-250,,15.99,Shisha,Blue Mist,,,,tobacco_catalog,88
+starbuzz-pirates-cave-250g,Starbuzz Pirate's Cave 250g,Starbuzz,hookah,Exotic pirate's cave blend. 250g.,SBZ-PRC-250,,15.99,Shisha,Pirate's Cave,,,,tobacco_catalog,85
+starbuzz-code-69-250g,Starbuzz Code 69 250g,Starbuzz,hookah,Premium Code 69 blend. 250g.,SBZ-C69-250,,15.99,Shisha,Code 69,,,,tobacco_catalog,85
+starbuzz-exotic-pink-250g,Starbuzz Exotic Pink 250g,Starbuzz,hookah,Exotic pink fruit blend. 250g.,SBZ-EPK-250,,15.99,Shisha,Exotic Pink,,,,tobacco_catalog,82
+fumari-white-gummi-bear-100g,Fumari White Gummi Bear 100g,Fumari,hookah,White gummy bear flavored shisha. 100g.,FMR-WGB-100,,11.99,Shisha,White Gummi Bear,,,,tobacco_catalog,88
+fumari-ambrosia-100g,Fumari Ambrosia 100g,Fumari,hookah,Tropical ambrosia blend shisha. 100g.,FMR-AMB-100,,11.99,Shisha,Ambrosia,,,,tobacco_catalog,85
+fumari-blueberry-muffin-100g,Fumari Blueberry Muffin 100g,Fumari,hookah,Blueberry muffin flavored shisha. 100g.,FMR-BBM-100,,11.99,Shisha,Blueberry Muffin,,,,tobacco_catalog,85
+tangiers-cane-mint-250g,Tangiers Cane Mint 250g,Tangiers,hookah,Strong cane mint burley shisha. 250g.,TNG-CNM-250,,18.99,Shisha,Cane Mint,,,,tobacco_catalog,85
+tangiers-citrus-lemon-250g,Tangiers Citrus Lemon 250g,Tangiers,hookah,Bold citrus lemon shisha. 250g.,TNG-CTL-250,,18.99,Shisha,Citrus Lemon,,,,tobacco_catalog,82
+tangiers-horchata-250g,Tangiers Horchata 250g,Tangiers,hookah,Creamy horchata flavored shisha. 250g.,TNG-HRC-250,,18.99,Shisha,Horchata,,,,tobacco_catalog,82
+adalya-love-66-250g,Adalya Love 66 250g,Adalya,hookah,Peach and raspberry blend. 250g.,ADL-L66-250,,14.99,Shisha,Love 66,,,,tobacco_catalog,85
+adalya-ice-queen-250g,Adalya Ice Queen 250g,Adalya,hookah,Iced fruit blend. 250g.,ADL-ICQ-250,,14.99,Shisha,Ice Queen,,,,tobacco_catalog,82
+adalya-watermelon-mint-250g,Adalya Watermelon Mint 250g,Adalya,hookah,Watermelon with mint. 250g.,ADL-WTM-250,,14.99,Shisha,Watermelon Mint,,,,tobacco_catalog,82
+mazaya-special-mix-250g,Mazaya Special Mix 250g,Mazaya,hookah,Special mix premium shisha tobacco. 250g.,MZY-SPM-250,,11.99,Shisha,Special Mix,,,,tobacco_catalog,78
+zyn-cool-mint-3mg,ZYN Cool Mint 3mg,ZYN,nicotine,Nicotine pouches. Cool mint flavor. 3mg. 15-count.,ZYN-CM-3MG,810023362007,5.49,Pouches,Cool Mint,3mg,,tobacco_catalog,95
+zyn-cool-mint-6mg,ZYN Cool Mint 6mg,ZYN,nicotine,Nicotine pouches. Cool mint flavor. 6mg. 15-count.,ZYN-CM-6MG,810023362014,5.49,Pouches,Cool Mint,6mg,,tobacco_catalog,95
+zyn-wintergreen-3mg,ZYN Wintergreen 3mg,ZYN,nicotine,Nicotine pouches. Wintergreen flavor. 3mg. 15-count.,ZYN-WG-3MG,810023362021,5.49,Pouches,Wintergreen,3mg,,tobacco_catalog,95
+zyn-wintergreen-6mg,ZYN Wintergreen 6mg,ZYN,nicotine,Nicotine pouches. Wintergreen flavor. 6mg. 15-count.,ZYN-WG-6MG,810023362038,5.49,Pouches,Wintergreen,6mg,,tobacco_catalog,95
+zyn-citrus-3mg,ZYN Citrus 3mg,ZYN,nicotine,Nicotine pouches. Citrus flavor. 3mg. 15-count.,ZYN-CT-3MG,810023362045,5.49,Pouches,Citrus,3mg,,tobacco_catalog,92
+zyn-citrus-6mg,ZYN Citrus 6mg,ZYN,nicotine,Nicotine pouches. Citrus flavor. 6mg. 15-count.,ZYN-CT-6MG,810023362052,5.49,Pouches,Citrus,6mg,,tobacco_catalog,92
+zyn-coffee-6mg,ZYN Coffee 6mg,ZYN,nicotine,Nicotine pouches. Coffee flavor. 6mg. 15-count.,ZYN-CF-6MG,810023362069,5.49,Pouches,Coffee,6mg,,tobacco_catalog,90
+zyn-cinnamon-6mg,ZYN Cinnamon 6mg,ZYN,nicotine,Nicotine pouches. Cinnamon flavor. 6mg. 15-count.,ZYN-CN-6MG,810023362076,5.49,Pouches,Cinnamon,6mg,,tobacco_catalog,90
+zyn-smooth-3mg,ZYN Smooth 3mg,ZYN,nicotine,Tobacco-free smooth pouches. 3mg. 15-count.,ZYN-SM-3MG,810023362083,5.49,Pouches,Smooth,3mg,,tobacco_catalog,88
+on-mint-3mg,ON! Mint 3mg,ON!,nicotine,Nicotine pouches. Mint flavor. 3mg. 20-count.,ONP-MT-3MG,,4.99,Pouches,Mint,3mg,,tobacco_catalog,90
+on-coffee-3mg,ON! Coffee 3mg,ON!,nicotine,Nicotine pouches. Coffee flavor. 3mg. 20-count.,ONP-CF-3MG,,4.99,Pouches,Coffee,3mg,,tobacco_catalog,90
+on-wintergreen-3mg,ON! Wintergreen 3mg,ON!,nicotine,Nicotine pouches. Wintergreen. 3mg. 20-count.,ONP-WG-3MG,,4.99,Pouches,Wintergreen,3mg,,tobacco_catalog,88
+on-citrus-3mg,ON! Citrus 3mg,ON!,nicotine,Nicotine pouches. Citrus flavor. 3mg. 20-count.,ONP-CT-3MG,,4.99,Pouches,Citrus,3mg,,tobacco_catalog,88
+on-original-2mg,ON! Original 2mg,ON!,nicotine,Original tobacco-free pouches. 2mg. 20-count.,ONP-OG-2MG,,4.99,Pouches,Original,2mg,,tobacco_catalog,85
+rogue-mint-3mg,Rogue Mint 3mg,Rogue,nicotine,Nicotine pouches. Mint flavor. 3mg. 20-count.,RGE-MT-3MG,,4.79,Pouches,Mint,3mg,,tobacco_catalog,85
+rogue-wintergreen-3mg,Rogue Wintergreen 3mg,Rogue,nicotine,Nicotine pouches. Wintergreen. 3mg. 20-count.,RGE-WG-3MG,,4.79,Pouches,Wintergreen,3mg,,tobacco_catalog,85
+rogue-mango-3mg,Rogue Mango 3mg,Rogue,nicotine,Nicotine pouches. Mango flavor. 3mg. 20-count.,RGE-MGO-3MG,,4.79,Pouches,Mango,3mg,,tobacco_catalog,82
+rogue-peppermint-5mg,Rogue Peppermint 5mg,Rogue,nicotine,Nicotine pouches. Peppermint. 5mg. 20-count.,RGE-PPM-5MG,,4.99,Pouches,Peppermint,5mg,,tobacco_catalog,82
+velo-mint-4mg,VELO Mint 4mg,VELO,nicotine,Nicotine pouches. Mint flavor. 4mg. 15-count.,VLO-MT-4MG,,5.29,Pouches,Mint,4mg,,tobacco_catalog,88
+velo-citrus-4mg,VELO Citrus 4mg,VELO,nicotine,Nicotine pouches. Citrus flavor. 4mg. 15-count.,VLO-CT-4MG,,5.29,Pouches,Citrus,4mg,,tobacco_catalog,85
+velo-wintergreen-4mg,VELO Wintergreen 4mg,VELO,nicotine,Nicotine pouches. Wintergreen. 4mg. 15-count.,VLO-WG-4MG,,5.29,Pouches,Wintergreen,4mg,,tobacco_catalog,85
+lucy-mellow-mint-4mg,Lucy Mellow Mint 4mg,Lucy,nicotine,Nicotine pouches. Mellow mint. 4mg. 15-count.,LCY-MM-4MG,,5.99,Pouches,Mellow Mint,4mg,,tobacco_catalog,82
+lucy-cool-mint-4mg,Lucy Cool Mint 4mg,Lucy,nicotine,Nicotine pouches. Cool mint. 4mg. 15-count.,LCY-CM-4MG,,5.99,Pouches,Cool Mint,4mg,,tobacco_catalog,82
+lucy-wintergreen-4mg,Lucy Wintergreen 4mg,Lucy,nicotine,Nicotine pouches. Wintergreen. 4mg. 15-count.,LCY-WG-4MG,,5.99,Pouches,Wintergreen,4mg,,tobacco_catalog,80
+nordic-spirit-spearmint-6mg,Nordic Spirit Spearmint 6mg,Nordic Spirit,nicotine,Tobacco-free nicotine pouches. Spearmint. 6mg.,NDS-SPM-6MG,,5.99,Pouches,Spearmint,6mg,,tobacco_catalog,82
+cbdfx-gummies-mixed-berry-1500mg,CBDfx Mixed Berry CBD Gummies 1500mg,CBDfx,cbd,Broad-spectrum CBD gummies. 25mg each. 60-count.,CDF-GUM-MBR-1500,,49.99,Gummies,Mixed Berry,,,,tobacco_catalog,85
+charlottes-web-sleep-gummies,Charlotte's Web Sleep CBD Gummies 10mg,Charlotte's Web,cbd,CBD + melatonin sleep gummies. 10mg. 30-count.,CWB-SLP-10MG,,34.99,Gummies,Mixed Berry,,,,tobacco_catalog,88
+green-roads-sleepy-zs,Green Roads Sleepy Z's CBD Gummies 25mg,Green Roads,cbd,CBD sleep gummies with melatonin. 25mg. 30-count.,GRD-SLP-25MG,,39.99,Gummies,Berry,,,,tobacco_catalog,85
+cbdfx-tincture-1000mg,CBDfx CBD Oil Tincture 1000mg,CBDfx,cbd,Broad-spectrum CBD tincture. 1000mg. 30ml.,CDF-TIN-1000,,59.99,Tincture,Natural,,,,tobacco_catalog,85
+lazarus-naturals-tincture-750mg,Lazarus Naturals Full Spectrum Tincture 750mg,Lazarus Naturals,cbd,Full-spectrum CBD tincture. 750mg. 30ml.,LZN-TIN-750,,29.99,Tincture,Original,,,,tobacco_catalog,85
+king-palm-mini-wraps,King Palm Mini Natural Leaf Wraps 5-Pack,King Palm,cbd,Corn husk tipped natural palm leaf mini rolls.,KPM-MIN-5PK,,5.99,Wraps,Natural,,,,tobacco_catalog,88
+king-palm-slim-rolls,King Palm Slim Natural Leaf Rolls 5-Pack,King Palm,cbd,Corn husk tipped slim natural leaf rolls.,KPM-SLM-5PK,,5.99,Wraps,Natural,,,,tobacco_catalog,85
+high-hemp-honey-pot-wraps,High Hemp Organic Wraps Honey Pot Swirl 2-Pack,High Hemp,cbd,Organic hemp wraps with honey pot flavor.,HHP-HNY-2PK,,2.99,Wraps,Honey Pot,,,,tobacco_catalog,88
+high-hemp-grape-ape-wraps,High Hemp Organic Wraps Grape Ape 2-Pack,High Hemp,cbd,Organic hemp wraps with grape ape flavor.,HHP-GRP-2PK,,2.99,Wraps,Grape Ape,,,,tobacco_catalog,88
+twisted-hemp-original-wraps,Twisted Hemp Original Wraps 4-Pack,Twisted Hemp,cbd,Natural hemp wraps. Original flavor. 4-pack.,TWH-OG-4PK,,3.99,Wraps,Original,,,,tobacco_catalog,82
+canna-river-cbd-preroll-5pk,Canna River CBD Pre-Roll 5-Pack,Canna River,cbd,Hemp CBD pre-rolls. 5-pack. 1g each.,CNR-PRE-5PK,,19.99,Pre-Rolls,Natural,,,,tobacco_catalog,80
+hemp-bombs-gummies-300mg,Hemp Bombs CBD Gummies 300mg,Hemp Bombs,cbd,High-potency CBD gummies. 300mg total. 20-count.,HMB-GUM-300,,24.99,Gummies,Assorted,,,,tobacco_catalog,82
+cbdistillery-capsules-900mg,CBDistillery Full Spectrum Capsules 900mg,CBDistillery,cbd,Full-spectrum CBD soft gel capsules. 900mg. 30-count.,CBD-CAP-900,,54.99,Capsules,Unflavored,,,,tobacco_catalog,82
+delta-8-gummies-watermelon-25mg,Delta-8 Watermelon Gummies 25mg,Delta Extrax,cbd,Delta-8 THC gummies. 25mg each. Watermelon.,DXT-GUM-WTM-25,,24.99,Gummies,Watermelon,,,,tobacco_catalog,75
+delta-8-disposable-strawberry-1g,Delta-8 Strawberry Disposable 1g,Delta Extrax,cbd,Delta-8 THC disposable vape. 1g. Strawberry flavor.,DXT-DIS-STR-1G,,29.99,Disposable,Strawberry,,,,tobacco_catalog,75
+bic-full-size-classic,BIC Classic Full Size Lighter,BIC,accessories,Reliable full-size butane lighter. Assorted colors.,BIC-FUL-CLR,070501001189,2.49,Lighter,N/A,,,,tobacco_catalog,95
+bic-mini-lighter,BIC Mini Lighter,BIC,accessories,Compact mini lighter. Assorted colors.,BIC-MIN-CLR,070501002001,1.99,Lighter,N/A,,,,tobacco_catalog,95
+bic-maxi-lighter,BIC Maxi Lighter,BIC,accessories,Extra capacity maxi lighter.,BIC-MAX-CLR,070501003001,2.99,Lighter,N/A,,,,tobacco_catalog,92
+bic-special-edition,BIC Special Edition Lighter,BIC,accessories,Special edition designer lighter.,BIC-SPE-CLR,070501004001,3.49,Lighter,N/A,,,,tobacco_catalog,88
+clipper-metal-lighter,Clipper Metal Lighter,Clipper,accessories,Refillable metal lighter with replaceable flint.,CLP-MET-PLN,,4.99,Lighter,N/A,,,,tobacco_catalog,88
+clipper-flint-replacement,Clipper Flint Replacement Pack,Clipper,accessories,Replacement flints for Clipper lighters. 5-pack.,CLP-FLT-5PK,,2.49,Accessories,N/A,,,,tobacco_catalog,82
+zippo-brushed-chrome,Zippo Brushed Chrome Classic Lighter,Zippo,accessories,Classic windproof brushed chrome Zippo lighter.,ZIP-BSH-CRM,041689600000,24.99,Lighter,N/A,,,,tobacco_catalog,95
+zippo-black-ice,Zippo Black Ice Lighter,Zippo,accessories,Smooth black ice finish windproof lighter.,ZIP-BLK-ICE,041689602004,24.99,Lighter,N/A,,,,tobacco_catalog,95
+zippo-polished-brass,Zippo Windproof Polished Brass Lighter,Zippo,accessories,High-polish brass windproof lighter.,ZIP-POL-BRS,041689250005,24.99,Lighter,N/A,,,,tobacco_catalog,92
+raw-classic-king-size,RAW Classic King Size Rolling Papers,RAW,accessories,"Unbleached, natural king size papers. 32 leaves.",RAW-CLS-KS,716165152705,2.99,Rolling Papers,N/A,,,,tobacco_catalog,95
+raw-classic-1.25,RAW Classic 1.25 Rolling Papers,RAW,accessories,"Unbleached, natural 1.25 papers. 50 leaves.",RAW-CLS-125,716165152712,2.49,Rolling Papers,N/A,,,,tobacco_catalog,95
+raw-organic-king-size,RAW Organic Hemp King Size Papers,RAW,accessories,Organic hemp rolling papers. King size. 32 leaves.,RAW-ORG-KS,716165152729,3.49,Rolling Papers,N/A,,,,tobacco_catalog,92
+raw-connoisseur-king,RAW Classic Connoisseur King Size + Tips,RAW,accessories,King size papers with pre-rolled tips included.,RAW-CON-KS,716165152736,3.99,Rolling Papers,N/A,,,,tobacco_catalog,92
+raw-cones-king-6pack,RAW Classic King Size Pre-Rolled Cones 6-Pack,RAW,accessories,Pre-rolled classic cones. King size. 6-pack.,RAW-CNE-KS6,716165152743,4.99,Pre-Rolled Cones,N/A,,,,tobacco_catalog,92
+raw-cones-1.25-6pack,RAW Classic 1.25 Pre-Rolled Cones 6-Pack,RAW,accessories,Pre-rolled classic cones. 1.25 size. 6-pack.,RAW-CNE-1256,716165152750,4.49,Pre-Rolled Cones,N/A,,,,tobacco_catalog,90
+elements-king-size-papers,Elements Rice Papers King Size,Elements,accessories,Ultra-thin rice paper. King size. 32 leaves.,ELM-KS-RCE,,2.99,Rolling Papers,N/A,,,,tobacco_catalog,88
+elements-1.25-papers,Elements Rice Papers 1.25,Elements,accessories,Ultra-thin rice paper. 1.25 size. 50 leaves.,ELM-125-RCE,,2.49,Rolling Papers,N/A,,,,tobacco_catalog,85
+juicy-jays-blueberry,Juicy Jay's Blueberry Rolling Papers,Juicy Jay's,accessories,Flavored blueberry rolling papers. King size.,JJY-BLB-KS,,2.99,Rolling Papers,Blueberry,,,,tobacco_catalog,85
+juicy-jays-strawberry,Juicy Jay's Strawberry Rolling Papers,Juicy Jay's,accessories,Flavored strawberry rolling papers. King size.,JJY-STR-KS,,2.99,Rolling Papers,Strawberry,,,,tobacco_catalog,85
+ocb-premium-papers,OCB Premium Rolling Papers,OCB,accessories,Premium ultra-thin papers. King size. 32 leaves.,OCB-PRE-KS,,2.99,Rolling Papers,N/A,,,,tobacco_catalog,85
+rizla-silver-papers,Rizla Silver King Size Papers,Rizla,accessories,Classic Rizla silver thin papers. King size.,RZL-SLV-KS,,2.49,Rolling Papers,N/A,,,,tobacco_catalog,85
+zig-zag-orange-1.25,Zig-Zag Orange Papers 1.25,Zig-Zag,accessories,Classic orange slow-burning papers. 1.25 size.,ZZG-ORG-125,012230002125,2.49,Rolling Papers,N/A,,,,tobacco_catalog,92
+zig-zag-ultra-thin,Zig-Zag Ultra Thin Papers King Size,Zig-Zag,accessories,Ultra-thin slow-burning papers. King size.,ZZG-ULT-KS,012230002132,2.99,Rolling Papers,N/A,,,,tobacco_catalog,88
+santa-cruz-shredder-2pc-medium,Santa Cruz Shredder 2-Piece Medium Grinder,Santa Cruz Shredder,accessories,High-quality anodized aluminum 2-piece grinder.,SCS-2PC-MED,,29.99,Grinder,N/A,,,,tobacco_catalog,90
+santa-cruz-shredder-4pc-medium,Santa Cruz Shredder 4-Piece Medium Grinder,Santa Cruz Shredder,accessories,Premium 4-piece aluminum grinder with kief catcher.,SCS-4PC-MED,,44.99,Grinder,N/A,,,,tobacco_catalog,90
+space-case-medium-4pc,Space Case Medium 4-Piece Grinder,Space Case,accessories,Titanium 4-piece grinder. Medium size.,SPC-4PC-MED,,74.99,Grinder,N/A,,,,tobacco_catalog,88
+cali-crusher-original-4pc,Cali Crusher Original 4-Piece Grinder,Cali Crusher,accessories,4-piece aluminum grinder with kief catcher.,CAL-4PC-OG,,34.99,Grinder,N/A,,,,tobacco_catalog,85
+raw-rolling-machine-king,RAW King Size Rolling Machine,RAW,accessories,Cigarette rolling machine. King size. 110mm.,RAW-RMK-110,716165152767,6.99,Rolling Machine,N/A,,,,tobacco_catalog,88
+zig-zag-rolling-machine-70mm,Zig-Zag 70mm Cigarette Rolling Machine,Zig-Zag,accessories,Classic 70mm cigarette rolling machine.,ZZG-RMC-70,012230005002,5.99,Rolling Machine,N/A,,,,tobacco_catalog,85
+raw-perforated-tips,RAW Perforated Wide Tips,RAW,accessories,Perforated natural tips. 50-pack.,RAW-TIP-WD,716165152774,1.99,Tips,N/A,,,,tobacco_catalog,88
+glass-bowl-14mm,Glass Bowl 14mm Standard,Generic,accessories,Standard 14mm male glass bowl for water pipes.,GLS-BWL-14MM,,4.99,Glass,N/A,,,,tobacco_catalog,70
+glass-spoon-pipe,Classic Glass Spoon Pipe,Generic,accessories,Hand-blown borosilicate glass spoon pipe. 4-inch.,GLS-SPN-4IN,,12.99,Pipe,N/A,,,,tobacco_catalog,70
+glass-chillum-hitter,Glass Chillum One Hitter,Generic,accessories,3-inch borosilicate glass chillum one hitter.,GLS-CHL-3IN,,7.99,Pipe,N/A,,,,tobacco_catalog,70
+glass-blunt-slider,Glass Blunt Slider 7-Pipe,7Pipe,accessories,Twist glass blunt. 7-pipe design. Easy clean.,7PP-GBL-STD,,12.99,Pipe,N/A,,,,tobacco_catalog,78
+double-blade-cigar-cutter,Double Blade Guillotine Cigar Cutter,Generic,accessories,Stainless steel double blade guillotine cigar cutter.,CGR-CUT-DUL,,9.99,Cutter,N/A,,,,tobacco_catalog,75
+single-flame-torch,Single Flame Cigar Torch Lighter,Generic,accessories,Windproof single-jet flame butane torch lighter.,TRH-SGL-FLM,,12.99,Torch Lighter,N/A,,,,tobacco_catalog,72
+triple-flame-torch,Triple Flame Butane Torch Lighter,Generic,accessories,Heavy-duty triple jet flame torch lighter.,TRH-TRL-FLM,,19.99,Torch Lighter,N/A,,,,tobacco_catalog,72
+glass-ashtray-round,Round Glass Ashtray,Generic,accessories,Classic round heavy glass ashtray.,ASH-GLS-RND,,8.99,Ashtray,N/A,,,,tobacco_catalog,70
+ceramic-ashtray-4slot,Ceramic 4-Slot Ashtray,Generic,accessories,Ceramic ashtray with 4 cigarette slots.,ASH-CRM-4SL,,11.99,Ashtray,N/A,,,,tobacco_catalog,70
+raw-smell-proof-bag,RAW Smell Proof Bag Medium,RAW,accessories,Locking smell-proof storage bag. Medium.,RAW-SPB-MED,716165152781,14.99,Storage,N/A,,,,tobacco_catalog,85

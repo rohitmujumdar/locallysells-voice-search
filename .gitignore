@@ -1,0 +1,11 @@
+# the upstream LocallySells clone — read-only data source, not ours to commit
+localgrid/
+
+# python
+__pycache__/
+*.pyc
+.venv/
+
+# env / secrets
+.env
+*.env

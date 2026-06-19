@@ -1,0 +1,29 @@
+{
+  "type": "function",
+  "function": {
+    "name": "search_products",
+    "description": "Search the LocallySells tobacco and nicotine product catalog by keyword, brand, or product category. Call this whenever the caller asks whether a product is available, what a price is, or what items exist in a category (e.g. 'do you have Marlboro Reds', 'what vapes do you carry', 'how much are ZYN pouches'). Returns the top matching products with prices.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "The brand, product name, or keyword the caller mentioned, e.g. 'Marlboro Red', 'ZYN', 'Elf Bar', 'blue razz'. Leave empty if the caller only named a category."
+        },
+        "category": {
+          "type": "string",
+          "description": "Optional product category to narrow the search. One of: cigarettes, cigars, vape, hookah, nicotine, cbd, accessories.",
+          "enum": ["cigarettes", "cigars", "vape", "hookah", "nicotine", "cbd", "accessories"]
+        },
+        "limit": {
+          "type": "number",
+          "description": "Max number of products to return. Default 20."
+        }
+      },
+      "required": ["query"]
+    }
+  },
+  "server": {
+    "url": "https://totals-accountability-behavior-hdtv.trycloudflare.com/search_products"
+  }
+}
